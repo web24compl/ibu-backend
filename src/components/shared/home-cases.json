@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_home_cases",
+  "info": {
+    "displayName": "HomeCases",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "cases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.home-cases-item"
+    }
+  }
+}

@@ -32,6 +32,12 @@
     },
     "youtube": {
       "type": "string"
+    },
+    "careerTrainingUrl": {
+      "type": "string"
+    },
+    "careerLookingUrl": {
+      "type": "string"
     }
   }
 }

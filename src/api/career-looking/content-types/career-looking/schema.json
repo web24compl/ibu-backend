@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "career_lookings",
+  "info": {
+    "singularName": "career-looking",
+    "pluralName": "career-lookings",
+    "displayName": "Career Looking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "trainingMessage": {
+      "type": "text"
+    },
+    "points": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.numbers"
+    },
+    "linksWithImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.links-with-image"
+    }
+  }
+}

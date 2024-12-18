@@ -15,9 +15,35 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "textWithImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text-with-image"
+    },
+    "numbers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.numbers"
+    },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.team"
+    },
+    "team_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.team"
+    },
+    "team_3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.team"
+    },
+    "certificates": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.home-cases"
     }
   }
 }

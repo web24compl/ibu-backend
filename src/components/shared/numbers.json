@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_numbers",
+  "info": {
+    "displayName": "Numbers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "numbers": {
+      "displayName": "NumberSingleEnter",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.number-single-enter"
+    }
+  }
+}

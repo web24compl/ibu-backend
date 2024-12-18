@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_contact_form_people",
+  "info": {
+    "displayName": "ContactFormPerson",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "rodo": {
+      "type": "blocks"
+    },
+    "person": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.person"
+    }
+  }
+}

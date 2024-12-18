@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_number_single_enters",
+  "info": {
+    "displayName": "NumberSingleEnter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

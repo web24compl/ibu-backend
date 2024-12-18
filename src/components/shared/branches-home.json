@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_branches_homes",
+  "info": {
+    "displayName": "BranchesHome",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "branches": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.branch-item-home"
+    }
+  }
+}
