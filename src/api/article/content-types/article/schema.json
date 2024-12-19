@@ -59,14 +59,15 @@
       "type": "text"
     },
     "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "button_text": {
       "type": "string"
@@ -79,6 +80,9 @@
     },
     "button_url_2": {
       "type": "string"
+    },
+    "list": {
+      "type": "blocks"
     }
   }
 }

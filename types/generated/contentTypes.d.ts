@@ -432,6 +432,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     >;
     highlighted: Schema.Attribute.Boolean;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    list: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
