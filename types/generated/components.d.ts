@@ -24,6 +24,23 @@ export interface SharedBranchesHome extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactFormPage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_form_pages';
+  info: {
+    displayName: 'ContactFormPage';
+  };
+  attributes: {
+    address: Schema.Attribute.Text;
+    company: Schema.Attribute.String;
+    companyData: Schema.Attribute.Text;
+    mail: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    rodo: Schema.Attribute.Blocks;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedContactFormPerson extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_form_people';
   info: {
@@ -285,6 +302,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.branch-item-home': SharedBranchItemHome;
       'shared.branches-home': SharedBranchesHome;
+      'shared.contact-form-page': SharedContactFormPage;
       'shared.contact-form-person': SharedContactFormPerson;
       'shared.home-banner': SharedHomeBanner;
       'shared.home-cases': SharedHomeCases;
