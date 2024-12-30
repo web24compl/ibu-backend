@@ -43,6 +43,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "industry_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry-category.industry-category",
+      "inversedBy": "references"
     }
   }
 }

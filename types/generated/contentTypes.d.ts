@@ -738,7 +738,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
     description: '';
-    displayName: 'Home';
+    displayName: 'Strona g\u0142\u00F3wna';
     pluralName: 'homes';
     singularName: 'home';
   };
@@ -762,6 +762,54 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIndustryCategoryIndustryCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'industry_categories';
+  info: {
+    description: '';
+    displayName: 'Industry Category';
+    pluralName: 'industry-categories';
+    singularName: 'industry-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contactForm: Schema.Attribute.Component<
+      'shared.contact-form-person',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    linksWithImage: Schema.Attribute.Component<
+      'shared.links-with-image',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::industry-category.industry-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    numbers: Schema.Attribute.Component<'shared.numbers', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    references: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::reference.reference'
+    >;
+    team: Schema.Attribute.Component<'shared.team', false>;
+    title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
   };
 }
 
@@ -850,6 +898,10 @@ export interface ApiReferenceReference extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    industry_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::industry-category.industry-category'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1419,6 +1471,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::industry-category.industry-category': ApiIndustryCategoryIndustryCategory;
       'api::industry.industry': ApiIndustryIndustry;
       'api::menu.menu': ApiMenuMenu;
       'api::reference.reference': ApiReferenceReference;

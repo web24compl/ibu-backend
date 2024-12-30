@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_contact_form_pages",
+  "info": {
+    "displayName": "ContactFormPage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "companyData": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "rodo": {
+      "type": "blocks"
+    }
+  }
+}

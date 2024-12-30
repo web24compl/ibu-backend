@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_categories",
+  "info": {
+    "singularName": "industry-category",
+    "pluralName": "industry-categories",
+    "displayName": "Industry Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reference.reference",
+      "mappedBy": "industry_category"
+    },
+    "title": {
+      "type": "text"
+    },
+    "linksWithImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.links-with-image"
+    },
+    "numbers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.numbers"
+    },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.team"
+    },
+    "contactForm": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-form-person"
+    }
+  }
+}

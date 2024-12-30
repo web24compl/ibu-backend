@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_links_with_images",
+  "info": {
+    "displayName": "LinksWithImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links-with-image-item"
+    },
+    "title": {
+      "type": "text"
+    }
+  }
+}
