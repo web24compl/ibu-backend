@@ -21,6 +21,7 @@ export default factories.createCoreController('api::industry-category.industry-c
                 linksWithImage: {
                     populate: {
                         image: true,
+                        title: true,
                         links: {
                             populate: {
                                 title: true,
@@ -35,6 +36,47 @@ export default factories.createCoreController('api::industry-category.industry-c
                     populate: {
                         background: true,
                         logo: true,
+                    }
+                },
+                numbers: {
+                    populate: {
+                        title: true,
+                        numbers: {
+                            populate: {
+                                value: true,
+                                label: true,
+                            }
+                        },
+                    }
+                },
+                team: {
+                    populate: {
+                        title: true,
+                        person: {
+                            populate: {
+                                image: true,
+                                name: true,
+                                position: true,
+                                phone: true,
+                                email: true,
+                            }
+                        }
+                    }
+                },
+                contactForm: {
+                    populate: {
+                        title: true,
+                        subtitle: true,
+                        rodo: true,
+                        person: {
+                            populate: {
+                                image: true,
+                                name: true,
+                                position: true,
+                                phone: true,
+                                email: true,
+                            }
+                        }
                     }
                 }
             }
