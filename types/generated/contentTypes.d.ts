@@ -394,7 +394,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     team_2: Schema.Attribute.Component<'shared.team', false>;
     team_3: Schema.Attribute.Component<'shared.team', false>;
     textWithImage: Schema.Attribute.Component<'shared.text-with-image', false>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

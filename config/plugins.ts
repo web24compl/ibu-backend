@@ -2,7 +2,7 @@ export default ({ env }) => ({
     settings: {
         cors: {
             enabled: true,
-            origin: ['http://localhost:3000'], // Ensure CORS is enabled here
+            origin: ['http://localhost:3000', 'http://[::]:3000'], // Ensure CORS is enabled here
         },
         helmet: {
             contentSecurityPolicy: {

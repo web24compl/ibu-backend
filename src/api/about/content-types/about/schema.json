@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "text",
+      "required": true
     },
     "textWithImage": {
       "type": "component",
