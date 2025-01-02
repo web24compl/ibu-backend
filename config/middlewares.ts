@@ -4,12 +4,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: [
-        'http://localhost:3000',
-        'http://[::]:3000',
-        'https://ibustrapi.web24.info.pl',
-        'https://ibu.web24.info.pl/',
-      ],
+      origin: ['*'],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
     },
