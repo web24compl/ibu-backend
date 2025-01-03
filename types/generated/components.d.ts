@@ -75,7 +75,6 @@ export interface SharedHomeCases extends Struct.ComponentSchema {
     displayName: 'HomeCases';
   };
   attributes: {
-    cases: Schema.Attribute.Component<'shared.home-cases-item', true>;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };

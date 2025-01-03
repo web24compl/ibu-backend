@@ -53,14 +53,6 @@ export default factories.createCoreController('api::home.home', ({ strapi }) => 
                     populate: {
                         title: true,
                         text: true,
-                        cases: {
-                            populate: {
-                                logo: true,
-                                background: true,
-                                description: true,
-                                url: true,
-                            }
-                        }
                     }
                 },
                 contact: {

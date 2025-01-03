@@ -11,11 +11,6 @@
     },
     "text": {
       "type": "text"
-    },
-    "cases": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.home-cases-item"
     }
   }
 }
