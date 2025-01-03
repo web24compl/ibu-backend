@@ -508,6 +508,7 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
 export interface ApiCareerLookingCareerLooking extends Struct.SingleTypeSchema {
   collectionName: 'career_lookings';
   info: {
+    description: '';
     displayName: 'Career Looking';
     pluralName: 'career-lookings';
     singularName: 'career-looking';
@@ -516,12 +517,12 @@ export interface ApiCareerLookingCareerLooking extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    careers: Schema.Attribute.Relation<'oneToMany', 'api::career.career'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    linksWithImage: Schema.Attribute.Component<
-      'shared.links-with-image',
-      false
+    linksImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -552,12 +553,12 @@ export interface ApiCareerTrainingCareerTraining
     draftAndPublish: true;
   };
   attributes: {
+    careers: Schema.Attribute.Relation<'oneToMany', 'api::career.career'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    linksWithImage: Schema.Attribute.Component<
-      'shared.links-with-image',
-      false
+    linksImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -600,7 +601,9 @@ export interface ApiCareerCareer extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.String;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

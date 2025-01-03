@@ -22,18 +22,14 @@ export default factories.createCoreController('api::career-training.career-train
                         }
                     }
                 },
-                linksWithImage: {
+                careers: {
                     populate: {
-                        image: true,
-                        links: {
-                            populate: {
-                                title: true,
-                                content: true,
-                                url: true,
-                            }
-                        }
+                        name: true,
+                        content: true,
+                        slug: true,
                     }
-                }
+                },
+                linksImage: true,
             }
         })
     }
